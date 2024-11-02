@@ -30,7 +30,7 @@ if a == 1:
         E = E - 5
         T = Teplo + 10
         print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
-        print("Našel jsi rukavice a čepici. +10 teplo")
+        print("Našel jsi rukavice a čepici. +10 teplo. Za hledání - 5 energie.")
         print("Co uděláš dále? \n1 Vyrážíš ven \n2 Oblékáš se, stojí tě to - 3 energie \nVyber možnost číslem:")
         c = input()
         c = int(c)
@@ -38,13 +38,14 @@ if a == 1:
         if c == 1:
             T = T - 20
             E = E - 3
+            MoznostA = (f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí {Bezpečí} \nEnergie : {E}")
+            print(MoznostA)
+            print("Venku je zima. Teplo -20. Za vynaložené úsilí -3 energie.")
             if T <= 0:
                 print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
                 print("Zabouchli se za tebou dveře do krytu. Bez oblečení ses ocitl v mrazivém počasí. Do pár hodin umrzáš.")
             elif T > 0:
-                print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
                 print("Jsi venku.")
-                MoznostA = (f"{Rychlost} {Z} {T} {Bezpečí} {E}")
         elif c == 2:
             E = E - 3
             print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
@@ -53,32 +54,33 @@ if a == 1:
             d = int(d)
             if d == 1:
                 T = T - 10
-                print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
-                MoznostB = (f"{Rychlost} {Z} {T} {Bezpečí} {E}")
+                E = E - 3
+                MoznostB = (f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+                print(MoznostB)
+                print("Venku mrzne. Triko a kraťasy nebyla nejlepší volba. Teplo -10, energie -3.")
             elif d == 2:
                 T = T - 5
-                print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
-                MoznostC = (f"{Rychlost} {Z} {T} {Bezpečí} {E}")
+                E = E - 3
+                MoznostC = (f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+                print(MoznostC)
+                print("Není ti nejlépe. Teplo -5. Energie -3.")
             elif d == 3:
                 T = T + 5
-                print("Ideální možnost do tohoto počasí. Teplo + 5")
-                print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
-                MoznostD = (f"{Rychlost} {Z} {T} {Bezpečí} {E}")
+                E = E - 3
+                MoznostD = (f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+                print(MoznostD)
+                print("Ideální možnost do tohoto počasí. Teplo + 5. Energie -3.")
             elif d == 4:
                 T = T + 10
                 R = Rychlost - 2
-                print(f"Rychlost : {R} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
-                print("Je ti velmi teplo + 10, ale jsi pomalejší. Rychlost - 2")
-                MoznostE = (f"{R} {Z} {T} {Bezpečí} {E}")
+                E = E - 5
+                MoznostE = (f"Rychlost : {R} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+                print(MoznostE)
+                print("Je ti velmi teplo + 10, ale jsi pomalejší. Rychlost - 2. Hůř se plahočíš. Energie -5")
             else:
                 print("Zvolil jsi špatnou kombinaci")
         else:
             print("Zvolil jsi špatnou kombinaci")
-
-            if d == 1:
-                T = T - 10
-                print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
-
 
     elif b == 2:
         E = Energie - 3
@@ -87,13 +89,33 @@ if a == 1:
         c = input()
         c = int(c)
         if c == 1:
-            print("V triku je v mrazivém počasí zima. -10 teplo")
-            T = T - 10
-            print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {Teplo} \nBezpečí : {Bezpečí} \nEnergie : {E}")
-        elif T <= 0:
-            print("Zabouchli se za tebou dveře do krytu. Bez oblečení ses ocitl v mrazivém počasí. Do pár hodin umrzáš.")
-        elif T > 0:
-            print("Je ti chladno, co uděláš. \nZvol číslo :")
+            E = E - 3
+            T = Teplo - 10
+            Moznost1A = (f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+            print(Moznost1A)
+            print("V triku je v mrazivém počasí zima. -10 teplo \nJe ti chladno, co uděláš. \nZvol číslo :")
+        elif c == 2:
+            E = E - 3
+            T = Teplo - 5
+            Moznost1B = (f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+            print(Moznost1B)
+            print("Není ti nejlépe. Teplo -5. Energie -3.")
+        elif c == 3:
+            T = Teplo + 5
+            E = E - 3
+            Moznost1C = (f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+            print(Moznost1C)
+            print("Ideální možnost do tohoto počasí. Teplo + 5. Energie -3.")
+        elif c == 4:
+            T = Teplo + 10
+            R = Rychlost - 2
+            E = E - 5
+            Moznost1D = (f"Rychlost : {R} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+            print(Moznost1D)
+            print("Je ti velmi teplo + 10, ale jsi pomalejší. Rychlost - 2. Hůř se plahočíš. Energie -5")
+        else:
+            print("Zvolil jsi špatnou kombinaci")
+
     elif b == 3:
         T = Teplo - 20
         print(f"Rychlost : {Rychlost} \nZdraví : {Z} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
@@ -104,8 +126,30 @@ if a == 1:
 
 elif a == 2:
     Z2 = Zdraví - 10
-    print(f"Rychost : {Rychlost} \nZdraví : {Z2} \nTeplo : {Teplo} \nBezpečí : {Bezpečí} \nEnergie : {Energie}")
+    print(f"Rychlost : {Rychlost} \nZdraví : {Z2} \nTeplo : {Teplo} \nBezpečí : {Bezpečí} \nEnergie : {Energie}")
     print("Oblékáš se a u toho nešíkovně shodíš sklenici s džusem do jídla, proto jsi hladový a žíznivý. -10 zdraví")
+    print("Co si oblečeš? \n1 Triko a kraťase \n2 Mikinu a kalhoty \n3 Bundu a zateplené kalhoty \n4 Kožich \nVyber opět číslem:")
+    c = input()
+    c = int(c)
+    if c == 1:
+        E = Energie - 3
+        T = Teplo - 10
+        Moznost2A = (f"Rychlost : {Rychlost} \nZdraví : {Zdraví} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+        print(Moznost2A)
+        print("V triku je v mrazivém počasí zima. -10 teplo \nJe ti chladno, co uděláš. \nZvol číslo :")
+    elif c == 2:
+        E = Energie - 3
+        T = Teplo - 5
+        Moznost2B = (f"Rychlost : {Rychlost} \nZdraví : {Zdraví} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+        print(Moznost2B)
+        print("Není ti nejlépe. Teplo -5. Energie -3.")
+    elif c == 3:
+        T = Teplo + 5
+        E = Energie - 3
+        Moznost2C = (f"Rychlost : {Rychlost} \nZdraví : {Zdraví} \nTeplo : {T} \nBezpečí : {Bezpečí} \nEnergie : {E}")
+        print(Moznost2C)
+        print("Ideální možnost do tohoto počasí. Teplo + 5. Energie -3.")
+
 
 elif a == 3:
     T3 = Teplo - 20
