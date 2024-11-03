@@ -1,3 +1,12 @@
+Rychlost = 10
+Zdraví = 50
+Teplo = 20
+Bezpečí = 10
+Energie = 10
+Atribut = [Rychlost, Zdraví, Teplo, Bezpečí, Energie]
+print(Atribut[2])
+
+
 a = """
 Tady neco muzu napsat
 a tady
