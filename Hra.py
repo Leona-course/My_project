@@ -1,3 +1,5 @@
+from My_project.Hello_world import Zdraví
+
 Atribut = {
     "Rychlost": 10,
     "Zdraví": 50,
@@ -143,14 +145,31 @@ if a == 1:
 
                         #Napadnout konvoj
                         if g == "ano":
-                            print["Energie"] = 5
+                            Atribut["Energie"] = 5
                             print(Atribut)
                             print("Bez rozmyslu útočíš. energie- 10")
-                            print["Bezpečí"] = 0
-                            print["Zdraví"] = 10
+                            Atribut["Bezpečí"] = 0
+                            Atribut["Zdraví"] = 10
                             print(Atribut)
-                            print("Konvoj má dva strážce, kteří okamžitě reagují. Nemáš žádnou zbraň a tak tě zajmou do vězení. - 10 bezpečí - 35 zdraví")
-#////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                            print("Konvoj má dva strážce, kteří okamžitě reagují. Harpuna ti nepomohla a tak tě zajmou do vězení. - 10 bezpečí - 35 zdraví")
+                            print("Máš 2 možnosti. Buďto se pokusíš utéct. Nebo odsedíš trest.")
+                            print("Napiš utect nebo trest:")
+                            h = input()
+
+                            #Utéct z vězění
+                            if h == "utect":
+                                Atribut[Zdraví] = 0
+                                print(Atribut)
+                                print("Snažíš se nenápadně ukrást klíče hlídači.")
+                                print("Stráž si toho všimne a hodí tě na obrátku. Umíráš oběšen před lidmi.")
+                                print("Umřel jsi. \nKONEC HRY")
+
+                            #Odsedět si trest.
+                            if h == "trest":
+                                print("Stráž tě nechává hladovět a často tě bije. Po 5 letech jsi propuštěn.")
+                                print("Vyhýbáš se problémům. A žiješ jako vandrák.")
+                                print("VUHRÁL JSI HRU")
+
                 # Hledáš kryt a oheň
                 # Usnout bez ohně.
                 if e == 3:
@@ -161,13 +180,15 @@ if a == 1:
                     print("Začíná ti být zima. -10 teplo Postupně umrzáš a vidíš, jak se na tebe šelmy sbíhají.")
                     print("Konec hry")
 
-
+            #
             if d == 2:
-                Atribut["Energie"] = 0
+                Atribut["Energie"] = 4
                 Atribut["Teplo"] = 20
-                Atribut[Bezpečí] = 5
+                Atribut["Bezpečí"] = 5
+                print(Atribut)
                 print("\nRozděláš oheň a jdeš spát. energie - 3 teplo + 10 bezpečí -5")
                 print("Napádá tě vlk.")
+                print("")
 
         # Vybiras obleceni.
         elif c == 2:
