@@ -46,15 +46,16 @@ if a == 1:
             print(Atribut)
             print("\nVenku je zima. Teplo -20. Za vynaložené úsilí -3 energie.")
             print("\nJsi venku, kde sněží. Přemýšlíš co uděláš.")
-            print("1 Najdeš vodu. -4 energie \n2 Vytvoříš pasti. \n3 Hledáš skrýš a vztváříš oheň. \nZvol číslo:")
+            print("1 Najdeš vodu. -4 energie \n2 Vytvoříš pasti. \n3 Hledáš skrýš a vytváříš oheň. \nZvol číslo:")
             d = input()
             d = int(d)
 
             #Hledáš vodu.
             if d == 1:
                 Atribut["Energie"]= 3
+                Atribut["Zdraví"]= 65
                 print(Atribut)
-                print("\nNašel jsi průzračné jezero plné ryb. Vysekáváš díru do ledu. Napadlo tě nějakou rybu si ulovit. \nVytváříš si z klacku a ostrého kamene harpunu. -5 energie")
+                print("\nNašel jsi průzračné jezero plné ryb. + 5 zdraví Vysekáváš díru do ledu. Napadlo tě nějakou rybu si ulovit. \nVytváříš si z klacku a ostrého kamene harpunu. -5 energie")
                 print("1 Sníš syrovou rybu. \n2 Rozděláš oheň. - 3 energie \n3 Hledáš úkryt, kde rozděláš oheň - 6 energie\nVyber číslo:")
                 e = input()
                 e = int(e)
@@ -112,13 +113,55 @@ if a == 1:
                     Atribut["Zdraví"] = 40
                     Atribut["Teplo"] = 20
                     print(Atribut)
-                    print("\nRozdělal jsi ohně a usnínáš. Energie -3 Bezpečí - 5 Teplo + 10. Napadl tě vlk. Zabil jsi jej harpunou. Zdraví -2%")
+                    print("\nRozdělal jsi oheň a usnínáš. Energie -3 Bezpečí - 5 Teplo + 10. Napadl tě vlk. Zabil jsi jej harpunou. Zdraví -2%")
                     Atribut["Energie"] = 15
                     Atribut["Zdraví"] = 45
                     Atribut["Bezpečí"] = 10
                     print(Atribut)
                     print("\nPo vyhraném boji dospáváš. + 10 energie \nRozděláš oheň a opečeš rybu. + 5 zdraví + 5 energie + 5 bezpečí")
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    print("Kam se vydáš? Vyber si směr: \nchatka a cesta")
+                    f = input()
+
+                    #Chatka žoldnéřů
+                    if f == "chatka":
+                        Atribut["Energie"]= 10
+                        print(Atribut)
+                        print("\nNarážíš na žoldáky, tak potichu procházíš a jdeš nachystat pasti - 5 energie")
+                        print("Čekáš schovaný na stromě a až se žoldácí chytí do pasti, jdeš si pro jejich hlavy.")
+                        Atribut["Energie"] = 5
+                        print("Pokračuješ dál po cestě k hradu. energie - 5 Ukazuješ získané hlavy. Vsichni oslavují, protože se jedná o zlé bandity.")
+                        print("Stává se z tebe cenněný templář a žiješ si spokojený hojný život plný bojů a odměn.")
+                        print("VYHRÁL JSI HRU!")
+
+                    #Cesta
+                    if f == "cesta":
+                        Atribut["Energie"] = 0
+                        print(Atribut)
+                        print("Kráčíš si po cestě a vyhýbáš se nebezpečí. Vydíš konvoj plný bohatých lidí.")
+                        print("Napadáš je? \nOdpověz ano nebo ne:")
+                        g = input()
+
+                        #Napadnout konvoj
+                        if g == "ano":
+                            print["Energie"] = 5
+                            print(Atribut)
+                            print("Bez rozmyslu útočíš. energie- 10")
+                            print["Bezpečí"] = 0
+                            print["Zdraví"] = 10
+                            print(Atribut)
+                            print("Konvoj má dva strážce, kteří okamžitě reagují. Nemáš žádnou zbraň a tak tě zajmou do vězení. - 10 bezpečí - 35 zdraví")
+#////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                # Hledáš kryt a oheň
+                # Usnout bez ohně.
+                if e == 3:
+                    Atribut["Energie"] = 0
+                    Atribut["Bezpečí"] = 0
+                    Atribut["Teplo"] = 0
+                    print("Hledáš úkryt, ale nemáš dost sil. Usínáš po cestě. -3 energie -10 bezpečí")
+                    print("Začíná ti být zima. -10 teplo Postupně umrzáš a vidíš, jak se na tebe šelmy sbíhají.")
+                    print("Konec hry")
+
+
             if d == 2:
                 Atribut["Energie"] = 0
                 Atribut["Teplo"] = 20
