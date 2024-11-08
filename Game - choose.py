@@ -13,6 +13,14 @@
 #rozdelat ohen                           - 3 energie + 10 teplo
 #syrova ryba                             + 5 zdravi - 5 teplo
 #ohrata ryba                             + 5 energie + 5 zdravi
-#kryt a ohen                             - 6 energie +10 bezpeci +10 teplo
+#skrys a ohen                            - 6 energie +10 bezpeci +10 teplo
 #usnout bez ohne                         - 10 bezpeci - 10 teplo
 #usnout venku s ohnem                    - 5 bezpeci + 10 teplo
+#syrovy vlk                              + 10 zdravi - 5 teplo + 5 energie
+
+
+#1-1-1-1 done vsechny moznosti
+#1-1-1-2- 1-ano (Vyhrál jsi hru, jako cenněný a nejlepší kovář.)
+#1-1-1-2- 1-ne (Výhra, je z tebe psanec, ale zároveň legendární lovec.)
+#1-1-1-2- 2 (SMRT)
+#1-1-1-3-
