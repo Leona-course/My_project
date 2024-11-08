@@ -75,7 +75,7 @@ if a == 1:
                     Atribut["Zdraví"] = 30
                     Atribut["Teplo"] = 15
                     print(Atribut)
-                    print("\nRozděláváš oheň ze zbytku sil. - 3 energie - 5 bezpečí +10 teplo. Ve spánku tě apadá tě vlk. Nemáš čím se bránit, proto se snažíš utéct. Zdraví - 35")
+                    print("\nRozděláváš oheň ze zbytku sil. - 3 energie - 5 bezpečí +10 teplo. Ve spánku tě napadá tě vlk. Nemáš čím se bránit, proto se snažíš utéct. Zdraví - 35")
                     Atribut["Energie"] = 10
                     print(Atribut)
                     print("\nJdeš spát z vyčerpání.")
@@ -97,7 +97,7 @@ if a == 1:
                         Atribut["Bezpečí"] = 5
                         print(Atribut)
                         print("\nPo příchodu k chatce slyšíš hlasy žoldáků. Otáčíš se na patě a běžíš tiše směrem k jeskyni, kde se schováváš. energie - 5")
-                        Atribut[Bezpečí] = 0
+                        Atribut["Bezpečí"] = 0
                         print(Atribut)
                         print("Šli tě hledat a díky nízkému bezpečí tě našli a prodali do otroctví.\nKonec hry")
 
@@ -168,7 +168,7 @@ if a == 1:
                             if h == "trest":
                                 print("Stráž tě nechává hladovět a často tě bije. Po 5 letech jsi propuštěn.")
                                 print("Vyhýbáš se problémům. A žiješ jako vandrák.")
-                                print("VUHRÁL JSI HRU")
+                                print("VYHRÁL JSI HRU")
 
                 # Hledáš kryt a oheň
                 # Usnout bez ohně.
@@ -176,19 +176,51 @@ if a == 1:
                     Atribut["Energie"] = 0
                     Atribut["Bezpečí"] = 0
                     Atribut["Teplo"] = 0
-                    print("Hledáš úkryt, ale nemáš dost sil. Usínáš po cestě. -3 energie -10 bezpečí")
+                    print(Atribut)
+                    print("\nHledáš úkryt, ale nemáš dost sil. Usínáš po cestě. -3 energie -10 bezpečí")
                     print("Začíná ti být zima. -10 teplo Postupně umrzáš a vidíš, jak se na tebe šelmy sbíhají.")
                     print("Konec hry")
 
-            #
+            #Vytvářet pasti
             if d == 2:
-                Atribut["Energie"] = 4
-                Atribut["Teplo"] = 20
-                Atribut["Bezpečí"] = 5
+                Atribut["Energie"] = 2
+                Atribut["Teplo"] = 10
+                Atribut["Bezpečí"] = 20
                 print(Atribut)
-                print("\nRozděláš oheň a jdeš spát. energie - 3 teplo + 10 bezpečí -5")
-                print("Napádá tě vlk.")
-                print("")
+                print("\nVšude kolem sebe rozděláš pasti a čekáš pokud se něco chytí. - 5 energie + 10 bezpečí\n")
+                Atribut["Energie"] = 5
+                Atribut["Zdraví"] = 70
+                Atribut["Teplo"] = 5
+                print(Atribut)
+                print("\nSlyšíš ránu a nářek chyceného vlka v pasti. \nJdeš vlka dorazit ranou do hlavy kamenem. -2 energie \nOkamžitě sníš syrové vlčí maso. + 10 zdraví - 5 teplo + 5 energie")
+                print("Začíná ti být zima. \nChceš 1 rozdělat oheň nebo 2 najít úkryt. Zvol číslo:")
+                e = input()
+                e = int(e)
+
+                #Rozdělat oheň
+                if e == 1:
+                    Atribut["Energie"] = 7
+                    Atribut["Teplo"] = 25
+                    print(Atribut)
+                    print("Rozdělal jsi oheň. -3 energie + 10 teplo. \nNa ohni ohříváš zbytek masa vlka. A jeho srst použiješ jako kožíšek na oblečení. + 10 teplo.")
+                    print("Naučil ses žít v divočině. Bravurně umíš tvořit zbraně a štíty. \nJednou ti kolemjdoucí nabízí práci jako pomocník kováře.\nPřijímáš? Napiš ano nebo ne")
+                    f = input()
+
+                #Pomoc kováři
+                    if f == "ano":
+                        print("Opravdu ti práce jde od ruky. Dostáváš hodně kladných recenzí.\nHlavní kovář tě má rád a časem ti předává svou kovárnu.")
+                        print("Stal se z tebe nejlepší kovář v království. \nVyhrál jsi hru, jako cenněný a nejlepší kovář.")
+
+                #Život v divočině
+                    if f == "ne":
+                        print("Jsi lovec a často měníš místo úkrytu. Umíš tvořit dokonalé pasti a proto se ti párkrát podařilo zranit či zabít člověka.")
+                        print("Je z tebe psanec, ale zároveň legendární lovec. \nVyhrál jsi hru, gratuluji.")
+
+                # Najít úkryt
+               # elif e == 2:
+#////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
         # Vybiras obleceni.
         elif c == 2:
